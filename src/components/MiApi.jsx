@@ -6,13 +6,21 @@ function MiApi() {
   const [filteredBirds, setFilteredBirds] = useState([]);
 
   useEffect(() => {
-    fetch('https://aves.ninjas.cl/api/birds')
-      .then(response => response.json())
-      .then(data => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://aves.ninjas.cl/api/birds');
+        if (!response.ok) {
+          throw new Error('La respuesta de la red no fue correcta');
+        }
+        const data = await response.json();
         setBirds(data);
         setFilteredBirds(data);
-      })
-      .catch(error => console.error('Error fetching data:', error));
+      } catch (error) {
+        console.error('Error al acceder a los datos:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handleFilter = (criteria) => {
@@ -29,7 +37,7 @@ function MiApi() {
     <div>
       <Buscador onFilter={handleFilter} />
       <button onClick={handleSort}>Ordenar alfabéticamente</button>
-      <div>
+      <div className='birds-container'>
         {filteredBirds.map(bird => (
           <div key={bird.uid}>
             <h2>{bird.name.spanish}</h2>
