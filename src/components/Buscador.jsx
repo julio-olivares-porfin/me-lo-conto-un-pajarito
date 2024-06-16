@@ -16,6 +16,7 @@ function Buscador({ onFilter }) {
         placeholder="Qué pajarito te lo contó?"
         value={criteria}
         onChange={handleChange}
+        className="form-control"
       />
     </div>
   );

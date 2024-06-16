@@ -1,3 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.full-container {
+  font-family: "Work Sans", sans-serif;
+}
+
 .birds-container {
   background-color: rgb(198, 111, 111);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-control {
+  width: 800px;
+  height: 100px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.ejemplo-italic {
+  font-style: italic;
+}
+
+
+.main-container {
+  margin-top: 100px;
+}
+
+.bird-card {
+  width: 18rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+
+}
+
+.header p {
+  width: 800px;
+}
+
+input::placeholder {
+  font-size: 20px;
+  color: grey;
+}
+
+.boton-card {
+  font-size: small;
+}
+
+.card-fixed-size {
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+  height: 400px; /* Ajusta la altura según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-fixed {
+  height: 200px; /* Ajusta la altura de la imagen según tus necesidades */
+  object-fit: cover;
 }

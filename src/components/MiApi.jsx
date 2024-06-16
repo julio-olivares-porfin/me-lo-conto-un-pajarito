@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import Buscador from './Buscador';
+import { Button, Spinner } from 'react-bootstrap';
+import BirdCard from './BirdCard';
 
 function MiApi() {
   const [birds, setBirds] = useState([]);
   const [filteredBirds, setFilteredBirds] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +20,8 @@ function MiApi() {
         setFilteredBirds(data);
       } catch (error) {
         console.error('Error al acceder a los datos:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -34,16 +39,26 @@ function MiApi() {
   };
 
   return (
-    <div>
-      <Buscador onFilter={handleFilter} />
-      <button onClick={handleSort}>Ordenar alfabéticamente</button>
-      <div className='birds-container'>
-        {filteredBirds.map(bird => (
-          <div key={bird.uid}>
-            <h2>{bird.name.spanish}</h2>
-            <img src={bird.images.main} alt={bird.name.spanish} style={{ width: '200px' }} />
+    <div className="full-container">
+      <div className="header">
+        <h1> Me lo contó un pajarito</h1>
+        <p>Es una forma de decir que uno se enteró de algo, generalmente un rumor o un dato confidencial, sin revelar la fuente exacta de esa información. <span className="fw-bold">Ahora cuando te pidan la fuente, puedes citar un ave chilena</span></p>
+        <p>Por ejemplo: <span className="ejemplo-italic">Chincol, Gaviota, Pequén, etc</span></p>
+        <div className="hero-section">
+          <Buscador onFilter={handleFilter} />
+          <Button onClick={handleSort} variant="secondary" className="mb-3 w-25">Ordenar A-z</Button>
+        </div>
+      </div>
+      <div className='main-container container'>
+      {loading ? ( <Spinner animation="grow" />) : (
+
+          <div className="row">
+            {filteredBirds.map(bird => (
+              <BirdCard key={bird.uid} nombreBird={bird.name.spanish} imagenBird={bird.images.main} nombreLatinBird={bird.name.latin} />
+            ))}
           </div>
-        ))}
+
+      )}
       </div>
     </div>
   );
