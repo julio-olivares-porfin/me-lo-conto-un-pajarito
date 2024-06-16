@@ -13,7 +13,7 @@ function Buscador({ onFilter }) {
     <div>
       <input
         type="text"
-        placeholder="Qué pajarito te lo contó?"
+        placeholder="¿Qué pajarito te lo contó?"
         value={criteria}
         onChange={handleChange}
         className="form-control"
