@@ -58,6 +58,24 @@ input::placeholder {
   object-fit: cover;
 }
 
+.mi-api {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  background-color: whitesmoke;
+  justify-content: center;
+  margin-top: 100px;
+}
+
 @media (min-width: 768px) {
 
   .form-control {

@@ -39,15 +39,10 @@ function MiApi() {
   };
 
   return (
-    <div className="full-container">
-      <div className="header">
-        <h1> Me lo contó un pajarito</h1>
-        <p>Es una forma de decir que uno se enteró de algo, generalmente un rumor o un dato confidencial, sin revelar la fuente exacta de esa información. <span className="fw-bold">Ahora cuando te pidan la fuente, puedes citar un ave chilena</span></p>
-        <p>Por ejemplo: <span className="ejemplo-italic">Chincol, Gaviota, Pequén, etc</span></p>
-        <div className="hero-section">
-          <Buscador onFilter={handleFilter} />
-          <Button onClick={handleSort} variant="secondary" className="mb-3 w-25">Ordenar A-z</Button>
-        </div>
+    <>
+      <div className="hero-section">
+        <Buscador onFilter={handleFilter} />
+        <Button onClick={handleSort} variant="secondary" className="mb-3 w-25">Ordenar A-z</Button>
       </div>
       <div className='main-container container'>
       {loading ? ( <Spinner animation="grow" />) : (
@@ -60,7 +55,8 @@ function MiApi() {
 
       )}
       </div>
-    </div>
+    </>
+
   );
 }
 
