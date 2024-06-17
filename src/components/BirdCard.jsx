@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function BirdCard({ nombreBird, imagenBird, nombreLatinBird }) {
   return (
-    <div className='col-md-2'>
+    <div className='col-lg-3 col-md-4 col-sm-6'>
       <Card className='mb-4 card-fixed-size'>
       <Card.Img variant="top" src={imagenBird} alt={nombreBird} className="card-img-fixed" />
       <Card.Body>

@@ -52,7 +52,7 @@ function MiApi() {
       <div className='main-container container'>
       {loading ? ( <Spinner animation="grow" />) : (
 
-          <div className="row">
+          <div className="row col-12">
             {filteredBirds.map(bird => (
               <BirdCard key={bird.uid} nombreBird={bird.name.spanish} imagenBird={bird.images.main} nombreLatinBird={bird.name.latin} />
             ))}

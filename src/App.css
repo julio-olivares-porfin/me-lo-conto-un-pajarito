@@ -6,7 +6,7 @@
 
 
 .form-control {
-  width: 800px;
+  width: 400px;
   height: 100px;
 }
 
@@ -35,11 +35,10 @@
   align-items: center;
   margin-top: 100px;
   gap: 20px;
-
 }
 
 .header p {
-  width: 800px;
+  width: 400px;
 }
 
 input::placeholder {
@@ -47,16 +46,11 @@ input::placeholder {
   color: grey;
 }
 
-.boton-card {
-  font-size: small;
-}
-
 .card-fixed-size {
   width: 200px;
   height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .card-img-fixed {
@@ -64,4 +58,28 @@ input::placeholder {
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
 
+  .form-control {
+    width: 700px;
+    height: 100px;
+  }
+
+  .header p {
+    width: 700px;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .form-control {
+    width: 800px;
+    height: 100px;
+  }
+
+  .header p {
+    width: 800px;
+  }
+
+}
