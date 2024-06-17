@@ -6,7 +6,7 @@
 
 
 .form-control {
-  width: 400px;
+  width: 300px;
   height: 100px;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .header p {
-  width: 400px;
+  width: 300px;
 }
 
 input::placeholder {
