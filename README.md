@@ -5,6 +5,7 @@ Es una forma de decir que uno se enteró de algo, generalmente un rumor o un dat
 Por ejemplo: Chincol, Gaviota, Pequén, etc
 
 
-- [Ver Video explicativo en youtube](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
+- [Ver Video explicativo en youtube](https://youtu.be/7F4roFxKwQ4)
+- [Ver Aplicación funcionando en netlify.app](https://melocontounpajarito.netlify.app/)
 
 
