@@ -4,12 +4,6 @@
   font-family: "Work Sans", sans-serif;
 }
 
-.birds-container {
-  background-color: rgb(198, 111, 111);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
 .form-control {
   width: 800px;
@@ -58,14 +52,16 @@ input::placeholder {
 }
 
 .card-fixed-size {
-  width: 200px; /* Ajusta el ancho según tus necesidades */
-  height: 400px; /* Ajusta la altura según tus necesidades */
+  width: 200px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .card-img-fixed {
-  height: 200px; /* Ajusta la altura de la imagen según tus necesidades */
+  height: 200px;
   object-fit: cover;
 }
+
+
